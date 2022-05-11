@@ -15,9 +15,9 @@ if total_cost == balance:
 
 elif total_cost > balance:
      print('Purchase Unsuccessful!')
-     print('Available balance: ' + str(balance) + ' dollars' )
+     print('Current balance: ' + str(wallet) + ' dollars' )
 
-elif total_cost <= balnce:
+elif total_cost <= balance:
      print('Purchase Successful!')
      print('Available balance: ' + str(balance) + ' dollars' )
 
