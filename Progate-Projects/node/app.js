@@ -36,12 +36,7 @@ app.post('/create', (req, res) => {
     'INSERT INTO items (name) VALUES (?)',
     [req.body.itemName],
     (error, results) => {
-      connection.query(
-        'SELECT * FROM items',
-        (error, results) => {
-          res.render('index.ejs', {items: results});
-        }
-      );  
+      res.redirect('/index');  
     }
   );
   
