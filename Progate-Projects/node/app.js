@@ -29,4 +29,23 @@ app.get('/new', (req, res) => {
   res.render('new.ejs');
 });
 
+app.post('/create', (req, res) => {
+  // Write a query to add data to the database
+  connection.query(
+    'INSERT INTO items (name) VALUES (?)',
+    [req.body.itemName],
+    (error, results) => {
+      connection.query(
+        'SELECT * FROM items',
+        (error, results) => {
+          res.render('index.ejs', {items: results});
+        }
+      );  
+    }
+  );
+  
+  // Delete the code below that displays the list page
+   // Delete up until here
+});
+
 app.listen(3000);
