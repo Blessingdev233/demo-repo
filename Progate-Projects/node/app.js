@@ -39,9 +39,16 @@ app.post('/create', (req, res) => {
       res.redirect('/index');  
     }
   );
-  
-  // Delete the code below that displays the list page
-   // Delete up until here
+});
+
+app.post('/delete/:id', (req, res) => {
+  conmection.query(
+    'DELETE FROM items WHERE id = ?',
+    [req.params.id],
+    (error, results) => {
+      res.redirect('/index');
+    }
+  )
 });
 
 app.listen(3000);
