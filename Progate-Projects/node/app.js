@@ -62,5 +62,9 @@ app.get('/edit/:id', (req, res) => {
     );
 });
 
+// Add a route for updating items
+app.post('/update/:id', (req, res) => {
+  res.redirect('/index');
+});
 
 app.listen(3000);
