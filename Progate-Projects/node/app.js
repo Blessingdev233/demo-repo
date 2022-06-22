@@ -48,7 +48,19 @@ app.post('/delete/:id', (req, res) => {
     (error, results) => {
       res.redirect('/index');
     }
-  )
+  );
 });
+
+app.get('/edit/:id', (req, res) => {
+    //code to get the selected item from the database
+    connection.query(
+      'SELECT * FROM items WHERE id = ?',
+      [req.params.id], 
+      (error, results) => {
+        res.render('edit.ejs', {item: results[0]});
+      }
+    );
+});
+
 
 app.listen(3000);
