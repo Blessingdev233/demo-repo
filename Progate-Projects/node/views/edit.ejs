@@ -17,8 +17,11 @@
       </div>
       <div class="item-form-wrapper">
         <p class="form-label">Item</p>
-        <form>
-          <input type="text">
+
+        <!--Specify the form's destination URL and method-->
+        <form action="/update/<%= item.id %>" method="post">
+            <!-- specify the value  and name attribute -->
+            <input type="text" name="itemName" value="<%= item.name %>">
           <input type="submit" value="Update">
         </form>
       </div>
