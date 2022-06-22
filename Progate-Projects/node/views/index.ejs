@@ -13,24 +13,28 @@
     <div class="container">
       <div class="container-header">
         <h1>Shopping List</h1>
-
-
+        <a href="/new" class="new-button">+ Add item</a>
       </div>
       <div class="index-table-wrapper">
         <div class="table-head">
           <span class="id-column">ID</span>
           <span>Item</span>
         </div>
-        <% const items = [
-          {id: 1, name: 'potatoes'},
-          {id: 2, name: 'carrots'},
-          {id: 3, name: 'onions'},
-        ] %>
         <ul class="table-body">
           <% items.forEach((item) => { %>
             <li>
-              <span class="id-column"><%= item.id %></span>
-              <span class="name-column"><%= item.name %></span>
+              <div class="item-data">
+                <span class="id-column"><%= item.id %></span>
+                <span class="name-column"><%= item.name %></span>
+              </div>
+              <div class="item-menu">
+                <form action="/delete/<%= item.id %>" method="post">
+                  <input type="submit" value="Delete">
+                </form>
+                <!-- Add a link containing the item id that goes to the edit page-->
+                <a href="/edit/<%= item.id %>">Edit</a> 
+                
+              </div>
             </li>
           <% }) %>
         </ul>
