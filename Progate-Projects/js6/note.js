@@ -78,3 +78,9 @@ animal.greet();
 
 // Call the info method using the animal constant
 animal.info();
+
+
+
+//// Define the Dog class to inherit from the Animal class
+class Dog extends Animal {
+}
