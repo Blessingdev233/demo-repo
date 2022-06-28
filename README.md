@@ -1,4 +1,4 @@
-# demo-repo
+# Demo-repo
 
 * contains projects
 
