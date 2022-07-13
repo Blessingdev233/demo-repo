@@ -1,4 +1,4 @@
 # demo-repo
 
+* contains mini-projects
 
-Trying out something new :), maybe...
