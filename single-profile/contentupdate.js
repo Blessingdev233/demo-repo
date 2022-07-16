@@ -16,7 +16,7 @@ The next thing that you need to do is: set up an event listener. The event you'r
 
 After this update, whatever you type into the input, after pressing the ENTER key, will be shown as the text inside the h1 element.
 
-Although this completes this lesson item, it's important to note that combining DOM manipulation and event handling allows for some truly remarkable interactive websites.
+Although this completes this lesson item, it's important to note that combining DOM manipulation and event handling allows for some truly remarkable interactive websites.//
 
 var h1 = document.createElement('h1')
 h1.innerText = "Type into the input to make this text change"
@@ -40,3 +40,36 @@ if (typeof(answer) === 'string') {
     document.body.innerText = '';
     document.body.appendChild(h1);
 }
+
+
+
+
+//excercise //
+
+
+var h1 = document.querySelector('h1')
+
+var arr = [
+    'Example Domain',
+    'First Click',
+    'Second Click',
+    'Third Click'
+]
+
+function handleClicks() {
+    switch(h1.innerText) {
+        case arr[0]:
+            h1.innerText = arr[1]
+            break
+        case arr[1]:
+            h1.innerText = arr[2]
+            break
+        case arr[2]:
+            h1.innerText = arr[3]
+            break
+        default:
+            h1.innerText = arr[0]
+    }
+}
+
+h1.addEventListener('click', handleClicks);
