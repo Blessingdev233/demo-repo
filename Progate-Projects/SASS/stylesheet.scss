@@ -1,6 +1,7 @@
 ////////////////////////////////
 // Add a mixin called "circle"//
 ////////////////////////////////
+
 @mixin circle{
   display: inline-block;
   border-radius: 50%;
@@ -103,12 +104,4 @@ main{
   }
 }
 
- _varibles.scss
 
-// File name
-
-// Assign the value #1dcaff to the $twitter variable
-$twitter: #1dcaff;
-
-// Assign the value #405f9e to the $facebook variable
-$facebook: #405f9e;
